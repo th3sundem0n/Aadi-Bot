@@ -493,7 +493,7 @@ function createBot() {
         bot = null;
         scheduleReconnect();
       }
-    }, 150000); // 150s - Aternos servers can take 90-120s to finish spawning a player
+    }, 30000); // 150s - Aternos servers can take 90-120s to finish spawning a player
 
     // FIX: guard against spawn firing twice (can happen on some servers)
     let spawnHandled = false;
