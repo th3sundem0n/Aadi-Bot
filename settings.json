@@ -6,7 +6,7 @@
     "type": "offline"
   },
   "server": {
-    "ip": "mcserveraadi.aternos.me:29640",
+    "ip": "mcserveraadi.aternos.me",
     "port": 29640,
     "version": "",
     "try-creative": false
