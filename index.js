@@ -469,7 +469,13 @@ function createBot() {
     bot.on('login', () => console.log('[Bot] Logged in'));
     bot.on('spawn', () => console.log('[Bot] Spawn event fired'));
     bot.on('end', (reason) => console.log('[Bot] End event:', reason || 'Unknown reason'));
-    bot.on('kicked', (reason) => console.log('[Bot] Kicked event:', reason));
+    bot.on('kicked', (reason) => {
+      try {
+        console.log('[Bot] Kicked event:', typeof reason === 'object' ? JSON.stringify(reason) : reason);
+      } catch {
+        console.log('[Bot] Kicked event: [unprintable reason]');
+      }
+    });
     bot.on('error', (err) => console.log('[Bot] Error event:', err?.message || err));
     bot.on('messagestr', (message) => console.log('[Bot] Message:', message));
 
@@ -1102,9 +1108,9 @@ process.on('uncaughtException', (err) => {
     if (isReconnecting) {
       console.log('[FATAL] isReconnecting was stuck - resetting before crash recovery');
       isReconnecting = false;
-      if (reconnectTimeout) {
-        clearTimeout(reconnectTimeout);
-        reconnectTimeout = null;
+      if (reconnectTimeoutId) {
+        clearTimeout(reconnectTimeoutId);
+        reconnectTimeoutId = null;
       }
     }
 
