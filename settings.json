@@ -21,6 +21,10 @@
     "auto-auth": {
       "enabled": true,
       "password": "chalol78"
+      "commands": [
+    "/login chalol78",
+    "/register chalol78 chalol78"
+  ]
     },
     "anti-afk": {
       "enabled": true,
