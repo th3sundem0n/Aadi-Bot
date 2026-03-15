@@ -6,7 +6,7 @@
     "type": "offline"
   },
   "server": {
-    "ip": "devario.aternos.host",
+    "ip": "darterfish.aternos.host",
     "port": 29640,
     "version": "",
     "try-creative": false
@@ -14,17 +14,13 @@
   "position": {
     "enabled": true,
     "x": 0,
-    "y": 64,
+    "y": 100,
     "z": 0
   },
   "utils": {
     "auto-auth": {
       "enabled": true,
-      "password": "chalol78",
-      "commands": [
-    "/login chalol78",
-    "/register chalol78 chalol78"
-  ]
+      "password": "chalol78"
     },
     "anti-afk": {
       "enabled": true,
