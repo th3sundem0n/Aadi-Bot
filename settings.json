@@ -6,7 +6,7 @@
     "type": "offline"
   },
   "server": {
-    "ip": "mcserveraadi.aternos.me",
+    "ip": "devario.aternos.host",
     "port": 29640,
     "version": "1.21.11",
     "try-creative": false
