@@ -463,6 +463,15 @@ function createBot() {
       hideErrors: false,
       checkTimeoutInterval: 600000
     });
+    
+    console.log('[Bot] Bot object created successfully');
+
+    bot.on('login', () => console.log('[Bot] Logged in'));
+    bot.on('spawn', () => console.log('[Bot] Spawn event fired'));
+    bot.on('end', (reason) => console.log('[Bot] End event:', reason || 'Unknown reason'));
+    bot.on('kicked', (reason) => console.log('[Bot] Kicked event:', reason));
+    bot.on('error', (err) => console.log('[Bot] Error event:', err?.message || err));
+    bot.on('messagestr', (message) => console.log('[Bot] Message:', message));
 
     bot.loadPlugin(pathfinder);
 
